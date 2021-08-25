@@ -4,7 +4,7 @@ A Vue component wrapper around the [Flickity carousel](https://flickity.metafizz
 ## Peer Dependenices
 - [vue](https://www.npmjs.com/package/vue)
 - [vue-class-component](https://www.npmjs.com/package/vue-class-component)
-- [vue-class-component](https://www.npmjs.com/package/vue-property-decorator)
+- [vue-property-decorator](https://www.npmjs.com/package/vue-property-decorator)
 
 ```
 npm install vue vue-class-component vue-class-component
