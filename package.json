@@ -1,0 +1,21 @@
+{
+	"name": "v-flickity",
+	"version": "1.0.0",
+	"description": "The Flickity carousel as a Vue component",
+	"main": "esm/index.js",
+	"scripts": {
+	},
+	"repository": "git://github.com/romancow/v-flickity.git",
+	"keywords": [
+		"vue",
+		"component",
+		"flickity",
+		"carousel"
+	],
+	"author": "Sean Wilson",
+	"license": "GPL-3.0",
+	"bugs": {
+		"url": "https://github.com/romancow/v-flickity/issues"
+	},
+	"homepage": "https://github.com/romancow/v-flickity#readme"
+}
