@@ -105,3 +105,6 @@ dist
 
 # nvm
 .nvmrc
+
+# Visual Studio Code settings
+.vscode/
