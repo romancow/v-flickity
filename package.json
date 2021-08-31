@@ -2,9 +2,22 @@
 	"name": "v-flickity",
 	"version": "1.0.0",
 	"description": "The Flickity carousel as a Vue component",
-	"main": "esm/index.js",
-	"scripts": {},
+	"main": "build/v-flickity.js",
+	"types": "types/index.d.ts",
+	"files": [
+		"build/",
+		"types/"
+	],
+	"scripts": {
+		"clean": "rimraf ./build/* ./types/*",
+		"prebuild": "npm run clean",
+		"build": "tsc -p . --diagnostics --explainFiles",
+		"prepare": "tsc -p ."
+	},
 	"repository": "git://github.com/romancow/v-flickity.git",
+	"publishConfig": {
+		"registry": "https://npm.pkg.github.com/"
+	},
 	"keywords": [
 		"vue",
 		"component",
@@ -22,6 +35,7 @@
 	},
 	"devDependencies": {
 		"@types/flickity": "^2.2.6",
+		"rimraf": "^3.0.2",
 		"typescript": "^4.4.2",
 		"vue": "^2.6.14"
 	},
