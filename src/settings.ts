@@ -1,5 +1,5 @@
-import { PropOptions } from 'vue'
-import { Options, EventBindings } from 'flickity'
+import type { PropOptions } from 'vue'
+import type { Options, EventBindings } from 'flickity'
 
 declare module 'flickity' {
 	export interface Options {
@@ -95,7 +95,7 @@ export namespace negateOptions {
 	]
 
 	export function includes(key: keyof Options) {
-		return keys.includes(key)
+		return keys.some(k => k === key)
 	}
 
 	export function toKey(key: keyof Options) {
@@ -104,7 +104,7 @@ export namespace negateOptions {
 
 	export function toProps() {
 		return keys.reduce(
-			(props, key) => (props[toKey(key)] = options.props[key], props),
+			(props, key) => (props[toKey(key)] = options.props[key]!, props),
 			{} as { [key: string]: PropOptions }
 		)
 	}
@@ -141,7 +141,7 @@ export namespace methods {
 	export function map() {
 		return keys.reduce(
 			(methods, key) => {
-				methods[key] = function(...args) { return this.flickity?.[key](...args) }
+				methods[key] = function(this: any, ...args) { return this.flickity?.[key](...args) }
 				return methods
 			},
 			{} as { [key: string]: (...args: any[]) => any }
@@ -170,10 +170,10 @@ export namespace events {
 	]
 
 	export function includes(event: string) {
-		return this.names.includes(event)
+		return names.some(name => name === event)
 	}
 
 	export function filter(events: string[]) {
-		return events.filter(event => includes(event))
+		return events.filter(event => includes(event)) as (keyof EventBindings)[]
 	}
 }
