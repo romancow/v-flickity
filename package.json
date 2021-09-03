@@ -3,7 +3,7 @@
 	"version": "1.0.0",
 	"description": "The Flickity carousel as a Vue component",
 	"main": "build/v-flickity.js",
-	"types": "types/index.d.ts",
+	"types": "types/v-flickity.d.ts",
 	"files": [
 		"build/",
 		"types/"
