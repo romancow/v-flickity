@@ -76,7 +76,11 @@ export default (Vue as VueConstructor<VFlickity>).extend({
 	},
 
 	mounted(this: VFlickity) {
-		this.$nextTick(() => { this.reset() })
+		this.$nextTick(() => this.reset())
+	},
+
+	updated(this: VFlickity) {
+		this.$nextTick(() => this.instance?.reloadCells())
 	},
 
 	beforeDestroy(this: VFlickity) {
