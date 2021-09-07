@@ -120,12 +120,12 @@ export namespace methods {
 		"previous",
 		"next",
 		"selectCell",
-		"resize",
+		// "resize",	// this conflicts with the resize option, so aliased as "resizeCarousel"
 		"reposition",
-		// "prepend",
-		// "append",
-		// "insert",
-		// "remove",
+		// "prepend",	// not mapped to discourage direct DOM access
+		// "append",	// not mapped to discourage direct DOM access
+		// "insert",	// not mapped to discourage direct DOM access
+		// "remove",	// not mapped to discourage direct DOM access
 		"playPlayer",
 		"stopPlayer",
 		"pausePlayer",
@@ -133,8 +133,8 @@ export namespace methods {
 		"viewFullscreen",
 		"exitFullscreen",
 		"toggleFullscreen",
-		// "destroy",
-		// "getCellElements",
+		// "destroy",	// not mapped to discourage direct DOM access
+		// "getCellElements",	// not mapped to discourage direct DOM access
 		"reloadCells"
 	]
 

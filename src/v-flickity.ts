@@ -54,6 +54,10 @@ export default (Vue as VueConstructor<VFlickity>).extend({
 	methods: {
 		...flickity.methods.map(),
 
+		resizeCarousel() {
+			this.instance?.resize()
+		},
+
 		reset() {
 			const { instance, $el, options } = this
 			instance?.destroy()
