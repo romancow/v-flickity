@@ -1,5 +1,5 @@
 {
-	"name": "v-flickity",
+	"name": "@romancow/v-flickity",
 	"version": "1.0.0",
 	"description": "The Flickity carousel as a Vue component",
 	"main": "build/v-flickity.js",
